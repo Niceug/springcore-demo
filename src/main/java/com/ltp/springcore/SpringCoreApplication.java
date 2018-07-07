@@ -8,5 +8,8 @@ public class SpringCoreApplication {
                 new ClassPathXmlApplicationContext("application-context.xml");
         Shape shape = (Shape)classPathXmlApplicationContext.getBean("rectangle");
         System.out.println(shape);
+
+        Shape circle = (Shape)classPathXmlApplicationContext.getBean("circle");
+        System.out.println(circle);
     }
 }

@@ -13,4 +13,8 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         <constructor-arg name="height" value="10"/>
     </bean>
 
+    <bean id="circle" class="com.ltp.springcore.Circle" >
+        <constructor-arg name="radius" value="20"/>
+    </bean>
+
 </beans>
