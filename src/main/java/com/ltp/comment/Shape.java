@@ -1,4 +1,4 @@
-package com.ltp.springcore;
+package com.ltp.comment;
 
 public interface Shape {
     double computeArea();

@@ -1,4 +1,6 @@
-package com.ltp.springcore;
+package com.ltp.xml;
+
+import com.ltp.comment.Shape;
 
 public class ShapeCompute {
     private Shape rectangle;

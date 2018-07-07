@@ -8,16 +8,16 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 此处配置类 -->
-    <bean id="rectangle" class="com.ltp.entries.Rectangle" >
+    <bean id="rectangle" class="com.ltp.comment.impl.Rectangle" >
         <constructor-arg name="width" value="20"/>
         <constructor-arg name="height" value="10"/>
     </bean>
 
-    <bean id="circle" class="com.ltp.entries.Circle" >
+    <bean id="circle" class="com.ltp.comment.impl.Circle" >
         <constructor-arg name="radius" value="20"/>
     </bean>
 
-    <bean id="shapeCompute" class="com.ltp.springcore.ShapeCompute" >
+    <bean id="shapeCompute" class="com.ltp.xml.ShapeCompute" >
         <property name="rectangle" ref = "rectangle" />
         <property name="circle" ref = "circle" />
     </bean>
