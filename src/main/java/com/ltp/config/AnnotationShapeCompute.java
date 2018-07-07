@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+/**
+ * 一个组件。也相当于中间人。
+ */
 @Component
 public class AnnotationShapeCompute {
 

@@ -2,6 +2,9 @@ package com.ltp.xml;
 
 import com.ltp.comment.Shape;
 
+/**
+ * 相当于中间人，专用于产生Shape对象。
+ */
 public class ShapeCompute {
     private Shape rectangle;
     private Shape circle;

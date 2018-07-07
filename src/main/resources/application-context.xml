@@ -8,6 +8,8 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 此处配置类 -->
+
+    <!--通过构造方法获取实例对象-->
     <bean id="rectangle" class="com.ltp.comment.impl.Rectangle" >
         <constructor-arg name="width" value="20"/>
         <constructor-arg name="height" value="10"/>
@@ -17,6 +19,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         <constructor-arg name="radius" value="20"/>
     </bean>
 
+    <!--用于获取实例对象的Bean对象，用户只需要依赖此对象即可，从而断开了与以上两个实例对象的依赖-->
     <bean id="shapeCompute" class="com.ltp.xml.ShapeCompute" >
         <property name="rectangle" ref = "rectangle" />
         <property name="circle" ref = "circle" />
