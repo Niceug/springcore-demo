@@ -1,4 +1,6 @@
-package com.ltp.springcore;
+package com.ltp.entries;
+
+import com.ltp.springcore.Shape;
 
 public class Rectangle implements Shape {
     private final double width;

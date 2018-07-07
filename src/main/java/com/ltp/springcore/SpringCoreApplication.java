@@ -6,10 +6,10 @@ public class SpringCoreApplication {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext classPathXmlApplicationContext =
                 new ClassPathXmlApplicationContext("application-context.xml");
-        Shape shape = (Shape)classPathXmlApplicationContext.getBean("rectangle");
-        System.out.println(shape);
+        ShapeCompute shapeCompute = (ShapeCompute) classPathXmlApplicationContext.getBean("shapeCompute");
+        System.out.println(shapeCompute.getShape("circle"));
 
-        Shape circle = (Shape)classPathXmlApplicationContext.getBean("circle");
+        Shape circle = (Shape)classPathXmlApplicationContext.getBean("rectangle");
         System.out.println(circle);
     }
 }
