@@ -9,9 +9,11 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 此处配置类 -->
 
+    <!--工厂静态方法获取实例对象-->
     <bean id = "circleInstance" class="com.ltp.springcore.StaticShapeFactory" factory-method="getCircle"/>
     <bean id = "rectangleInstance" class="com.ltp.springcore.StaticShapeFactory" factory-method="getRectangle"/>
 
+    <!--工厂实例方法获取实例对象-->
     <bean id="shapeFactory" class="com.ltp.springcore.ShapeFactory" />
     <bean id="circleInstance1" class="com.ltp.springcore.ShapeFactory" factory-bean="shapeFactory" factory-method="getCircle" />
     <bean id="rectangleInstance1" class="com.ltp.springcore.ShapeFactory" factory-bean="shapeFactory" factory-method="getRectangle" />

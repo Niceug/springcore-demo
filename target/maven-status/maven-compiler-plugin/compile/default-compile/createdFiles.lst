@@ -1,0 +1,10 @@
+com\ltp\comment\Shape.class
+com\ltp\xml\ShapeCompute.class
+com\ltp\xml\XMLSpringCoreApplication.class
+com\ltp\config\AnnotationShapeCompute.class
+com\ltp\comment\impl\Circle.class
+com\ltp\springcore\ShapeFactory.class
+com\ltp\springcore\StaticShapeFactory.class
+com\ltp\springcore\FactorySpringCoreApplication.class
+com\ltp\comment\impl\Rectangle.class
+com\ltp\config\AnnotationShapeApplication.class
