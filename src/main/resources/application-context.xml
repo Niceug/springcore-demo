@@ -17,7 +17,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         <constructor-arg name="height" value="10"/>
     </bean>
 
-    <bean id="circle" class="com.ltp.comment.impl.Circle" >
+    <bean id="circle" class="com.ltp.comment.impl.Circle">
         <constructor-arg name="radius" value="20"/>
     </bean>
 
@@ -35,6 +35,35 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         </property>
     </bean>
 
-    
+
+    <!--类中有集合的情况-->
+    <bean id="complexObject" class="com.ltp.comment.ComplexObject">
+
+        <property name="list">
+            <list>
+                <value>zhangsan</value>
+                <value>lisi</value>
+                <value>wangwu</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="zhangsan">
+                    <value>zs</value>
+                </entry>
+
+                <entry key="lisi">
+                    <value>ll</value>
+                </entry>
+
+                <entry key="wangwu">
+                    <value>ww</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
 
 </beans>

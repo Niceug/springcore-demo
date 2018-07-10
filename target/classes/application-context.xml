@@ -12,19 +12,58 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <!--通过构造方法获取实例对象-->
     <bean id="rectangle" class="com.ltp.comment.impl.Rectangle" >
 
-        <!--根据参数名称(name)，参数类型(type)，参数位置(index)-->
+        <!--根据参数名称(name，编译时要加-parameter)，参数类型(type)，参数位置(index)，直接引用（ref）-->
         <constructor-arg name="width" value="20"/>
         <constructor-arg name="height" value="10"/>
     </bean>
 
-    <bean id="circle" class="com.ltp.comment.impl.Circle" >
+    <bean id="circle" class="com.ltp.comment.impl.Circle">
         <constructor-arg name="radius" value="20"/>
     </bean>
 
     <!--用于获取实例对象的Bean对象，用户只需要依赖此对象即可，从而断开了与以上两个实例对象的依赖-->
     <bean id="shapeCompute" class="com.ltp.xml.ShapeCompute" >
+
+        <!--通过set方法注入-->
         <property name="rectangle" ref = "rectangle" />
-        <property name="circle" ref = "circle" />
+
+        <!--内部Bean，减少对象的作用域-->
+        <property name="circle" >
+            <bean class="com.ltp.comment.impl.Circle">
+                <constructor-arg name="radius" value="44" />
+            </bean>
+        </property>
     </bean>
+
+
+    <!--类中有集合的情况-->
+    <bean id="complexObject" class="com.ltp.comment.ComplexObject">
+
+        <property name="list">
+            <list>
+                <value>zhangsan</value>
+                <value>lisi</value>
+                <value>wangwu</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="zhangsan">
+                    <value>zs</value>
+                </entry>
+
+                <entry key="lisi">
+                    <value>ll</value>
+                </entry>
+
+                <entry key="wangwu">
+                    <value>ww</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
 
 </beans>
